@@ -3,11 +3,15 @@ package greeting
 
 import "fmt"
 
-// Hello は name 宛ての挨拶文を返します。
+// Hello は name 宛ての挨拶文を lang の言語で返します。
+// lang が "ja" なら日本語、それ以外は英語です。
 // name が空の場合は "World" を使います。
-func Hello(name string) string {
+func Hello(name, lang string) string {
 	if name == "" {
 		name = "World"
+	}
+	if lang == "ja" {
+		return fmt.Sprintf("こんにちは、%sさん!", name)
 	}
 	return fmt.Sprintf("Hello, %s!", name)
 }
