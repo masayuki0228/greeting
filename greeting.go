@@ -11,3 +11,12 @@ func Hello(name string) string {
 	}
 	return fmt.Sprintf("Hello, %s!", name)
 }
+
+// Goodbye は name 宛ての別れの挨拶文を返します。
+// name が空の場合は "World" を使います。
+func Goodbye(name string) string {
+	if name == "" {
+		name = "World"
+	}
+	return fmt.Sprintf("Goodbye, %s!", name)
+}
