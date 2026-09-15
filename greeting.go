@@ -20,3 +20,12 @@ func Goodbye(name string) string {
 	}
 	return fmt.Sprintf("Goodbye, %s!", name)
 }
+
+// GoodMorning は name 宛ての朝の挨拶文を返します。
+// name が空の場合は "World" を使います。
+func GoodMorning(name string) string {
+	if name == "" {
+		name = "World"
+	}
+	return fmt.Sprintf("Good morning, %s!", name)
+}
